@@ -1,0 +1,63 @@
+<!-- Contact page -->
+<section class="contact py-5 my-lg-5">
+	<div class="container">
+    	<?php 
+			if(isset($_REQUEST['sent'])){
+				$sent = (int)$_REQUEST['sent'];
+				if($sent){
+					echo "<div class=\"alert alert-success text-center\"><h3>Message has been sent. We will contact you soon.</h3></div>";
+				}else{
+					echo "<div class=\"alert alert-danger text-center\"><h3>Message failed: Try again or send us email on <strong>info@almaharard.com</strong></h3></div>";
+				}
+			}
+		?>
+    	
+		<h3 class="heading text-center text-capitalize mb-5">Contact Us</h3>
+		<div class="row contact_information">
+			<div class="col-md-6 contact_left p-lg-5 p-4">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.407842940841!2d-84.59072938431194!3d33.8791486806534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f517c1de7b0dbb%3A0xc9cf176ee6c47499!2s3045%20Austell%20Rd%2C%20Marietta%2C%20GA%2030008%2C%20USA!5e0!3m2!1sen!2sng!4v1608792414012!5m2!1sen!2sng" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>			</div>
+			<div class="col-md-6 mt-md-0 mt-4">
+				<div class="contact_right p-lg-5 p-4">
+					<form action="feedback.php" method="post" role="form">
+						<div class="w3_agileits_contact_left">
+							<h3 class="mb-3">Contact form</h3>
+							<input type="text" name="Name" placeholder="Your Name" required>
+							<input type="email" name="Email" placeholder="Your Email" required>
+							<input type="text" name="Phone" placeholder="Phone Number" required>
+							<textarea name="Description" placeholder="Your Description Here..." required></textarea>
+						</div>
+						<div class="w3_agileits_contact_right">
+							<input type="submit" value="Submit">
+						</div>
+						<div class="clearfix"> </div>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="mt-5 information">
+					<div class="row">
+						<div class="col-sm-2 mb-sm-0 mb-3">
+							<i class="fas fa-comments"></i>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="text-uppercase mb-4">General Communication</h4>
+							<p class="mb-3 text-capitalize">for general queries, including partnership opportunities, please email us at <a href="mailto:info@crassociatefinance.com">info@crassociatefinance.com</a></p>
+						</div>
+					</div>
+			</div>
+				</div>
+				<div class="col-md-6 mt-md-5 mt-2 information">
+					<div class="row">
+						<div class="col-sm-2 mb-sm-0 mb-3">
+							<i class="fas fa-life-ring"></i>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="text-uppercase mb-4">Technical Support</h4>
+							<p class="mb-3 text-capitalize">we are here to help! if you have technical issues, contact support <span>+1-956-300-0187</span>.</p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</section>
+<!-- //Contact page -->
